@@ -31,7 +31,6 @@
 
 # string = "Ana are mere"
 # for i, v in enumerate(string):
-#     print(1)
+#  print(1)
 
-      
 
