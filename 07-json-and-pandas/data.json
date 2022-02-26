@@ -1,0 +1,13 @@
+{
+  "producator1": {
+    "masina" : "Dacia",
+    "culoare" : "rosu"
+  },
+  "producator2" : {
+  "masina" : "Volvo",
+  "culoare" : "alb"
+}
+}
+
+variabila1 = pd.read.json('data.json')
+print(variabila1)
