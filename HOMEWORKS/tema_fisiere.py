@@ -1,6 +1,6 @@
 import datetime
 
-# POSSIBLE_CATEGORIES = ["curs", "cumparaturi", "munca", "cadouri"]
+POSSIBLE_CATEGORIES = ["curs", "cumparaturi", "munca", "cadouri"]
 
 
 def insert_categories():
@@ -9,9 +9,9 @@ def insert_categories():
         if category.upper() == "STOP":
             break
 
-        # if category in POSSIBLE_CATEGORIES:
-        with open("categories.csv", "a") as f:
-            f.write(category + "\n")
+        if category in POSSIBLE_CATEGORIES:
+            with open("categories.csv", "a") as f:
+                f.write(category + "\n")
 
         category = input("Enter your task category: ")
 
@@ -271,6 +271,13 @@ def descending_category():
     tasks = list(reversed(tasks))
     print(tasks)
 
+
+filter_option = input("Enter your preferred task/data/blabla: ")
+def filter():
+    filtered_list =[]
+    if filter_option not in POSSIBLE_CATEGORIES:
+        filtered_list.append(POSSIBLE_CATEGORIES)
+#         optiuni cu coloanele dupa care filtrez / dai un string de la tastatura (input) /
 
 
 def main():
