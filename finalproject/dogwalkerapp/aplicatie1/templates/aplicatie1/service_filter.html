@@ -1,0 +1,25 @@
+{% load static %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in service_list %}
+
+                <tr>
+
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.type }}</td>
+               </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+

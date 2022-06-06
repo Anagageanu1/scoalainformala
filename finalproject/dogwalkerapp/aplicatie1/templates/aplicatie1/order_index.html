@@ -1,0 +1,26 @@
+{% load static %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in order_service %}
+                <tr>
+
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.type }}</td>
+<td>
+                        <form method="post">{% csrf_token %}
+                            <input type="submit" value="Order Service">
+                        </form>
+                    </td>
+                </tr>
+        {% endfor %}
+                 <tbody>
+        </table>

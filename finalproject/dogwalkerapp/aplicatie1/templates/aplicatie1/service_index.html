@@ -1,0 +1,31 @@
+{% load static %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in service_list %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.type }}</td>
+                    <td> <a href="{% url 'aplicatie1:add_service' %}" class="btn btn-success">Add Service</a>
+                    <td> <a href="{% url 'aplicatie1:update_service' item.id %}" class="btn btn-warning">Update Service</a>
+                    <td> <a href="{% url 'aplicatie1:delete_service' item.id %}" class="btn btn-danger">Delete Service</a>
+                    <td>
+                        <form method="post">{% csrf_token %}
+                            <input type="submit" value="Order Service">
+                        </form>
+                    </td>
+                <tr>
+        {% endfor %}
+                 <tbody>
+        </table>
